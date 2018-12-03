@@ -14,12 +14,24 @@ import javax.swing.JOptionPane;
 public class Cronometro {
 
     public void lerTexto() {
-
+        int iniciar;
+        String escrita = "x";
+        String texto = "A documentación é todo aquel conxunto de manuais impresos ou en formato dixital que explique unha aplicación informática.";
         long inicioTiempo = System.currentTimeMillis();
-        JOptionPane.showInputDialog("ESCRIBE A SEGUINTE FRASE : \n"
-                + "   A documentación é todo aquel conxunto de manuais impresos ou en formato dixital que explique unha aplicación informática.");
-        long finalTiempo = System.currentTimeMillis();
-        JOptionPane.showMessageDialog(null, "Preme enter para rematar");
-        JOptionPane.showMessageDialog(null, "Tardaches " + (finalTiempo - inicioTiempo) / 1000 + " seg en escribir a frase.");
+        JOptionPane.showMessageDialog(null, "Preme enter para empezar");
+        do {
+
+            escrita = JOptionPane.showInputDialog("ESCRIBE A SEGUINTE FRASE : \n"
+                    + "A documentación é todo aquel conxunto de manuais impresos ou en formato dixital que explique unha aplicación informática.");
+
+            if (texto.equals(escrita)) {
+                JOptionPane.showMessageDialog(null, "Preme enter para rematar");
+                long finalTiempo = System.currentTimeMillis();
+                JOptionPane.showMessageDialog(null, "Tardaches " + (finalTiempo - inicioTiempo) / 1000 + " seg en escribir a frase.");
+            } else {
+                JOptionPane.showMessageDialog(null, "Texto incorrecto.");
+            }
+
+        } while (texto.equals(escrita) == false);
     }
 }
