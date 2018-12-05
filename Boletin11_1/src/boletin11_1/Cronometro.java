@@ -17,8 +17,8 @@ public class Cronometro {
         int iniciar;
         String escrita = "x";
         String texto = "A documentación é todo aquel conxunto de manuais impresos ou en formato dixital que explique unha aplicación informática.";
-        long inicioTiempo = System.currentTimeMillis();
         JOptionPane.showMessageDialog(null, "Preme enter para empezar");
+        long inicioTiempo = System.currentTimeMillis();
         do {
 
             escrita = JOptionPane.showInputDialog("ESCRIBE A SEGUINTE FRASE : \n"
